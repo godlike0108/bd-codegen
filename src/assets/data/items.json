@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "id": 0,
+      "src": "0.png",
+      "icon": ":skin:",
+      "name": "漂流追蹤者的外皮",
+      "money": 42800
+    },
+    {
+      "id": 1,
+      "src": "1.png",
+      "icon": ":jawbone:",
+      "name": "幽冥鐵牙的顎骨",
+      "money": 52400
+    },
+    {
+      "id": 2,
+      "src": "2.png",
+      "icon": ":horn:",
+      "name": "納恩薩克的角破片",
+      "money": 53700
+    },
+    {
+      "id": 3,
+      "src": "3.png",
+      "icon": ":spike:",
+      "name": "赫卡魯的突起",
+      "money": 82000
+    },
+    {
+      "id": 4,
+      "src": "4.png",
+      "icon": ":neidan:",
+      "name": "海洋怪獸的內丹",
+      "money": 100000
+    },
+    {
+      "id": 5,
+      "src": "5.png",
+      "icon": ":coin:",
+      "name": "古德蒙特海賊團的金幣",
+      "money": 100000
+    },
+    {
+      "id": 6,
+      "src": "6.png",
+      "icon": ":shell~1:",
+      "name": "坎迪杜姆的甲殼",
+      "money": 409200
+    },
+    {
+      "id": 7,
+      "src": "7.png",
+      "icon": ":yello:",
+      "name": "幽冥鐵牙的舌頭",
+      "money": 100000000
+    },
+    {
+      "id": 8,
+      "src": "8.png",
+      "icon": ":yello:",
+      "name": "古德蒙特海賊團的黃金酒杯",
+      "money": 100000000
+    },
+    {
+      "id": 9,
+      "src": "9.png",
+      "icon": ":yello:",
+      "name": "坎迪杜姆的鋼鐵甲殼",
+      "money": 100000000
+    },
+    {
+      "id": 10,
+      "src": "10.png",
+      "icon": ":yello:",
+      "name": "納恩薩克的鰭",
+      "money": 100000000
+    },
+    {
+      "id": 11,
+      "src": "11.png",
+      "icon": ":yello:",
+      "name": "赫卡魯的紫水晶突起",
+      "money": 100000000
+    },
+    {
+      "id": 12,
+      "src": "12.png",
+      "icon": ":yello:",
+      "name": "漂流追蹤者的鬍子",
+      "money": 100000000
+    }
+  ]
+}
