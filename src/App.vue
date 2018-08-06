@@ -11,6 +11,7 @@
         <el-col :xs="24" :sm="12">
           <el-form-item label="賣出後公會資金">
             <el-input-number class="money-input" size="small" :min="0" v-model ="codeGen.afterCoin"></el-input-number>
+            <el-button v-if="total>0" type="primary" size="medium" @click="calcAfterCoin()">一鍵計算</el-button>
           </el-form-item>
         </el-col>
       </el-row>
@@ -133,6 +134,9 @@ export default {
     addComma: utils.addComma
   },
   methods: {
+    calcAfterCoin() {
+      this.codeGen.afterCoin = this.codeGen.beforeCoin + this.total
+    },
     updateTotal(item) {
       item.total = item.money * item.amount
     },
