@@ -80,7 +80,10 @@
         <el-button type="primary" @click="reset('codeGen')">選項重設</el-button>
       </el-form-item>
       <el-form-item label="代碼" v-if="isValid">
-        <pre class="code"><code>{{code}}</code></pre>
+        <pre class="code">
+          <code class="for-copy">{{code}}</code>
+        </pre>
+        <el-button type="primary" size="mini" v-clipboard="code" @success="copySuccess">一鍵複製</el-button>
       </el-form-item>
     </el-form>
   </div>
@@ -162,13 +165,23 @@ export default {
           .join(' ')
         code += (member.trim() + ' ')
       }
-      // add item list
+      // add item list (no yello)
       let items = this.codeGen.picked
+        .filter(item => item.icon !== ':yello:')
         .map(item => {
           return `${item.icon} ${item.amount}`
         })
         .join(' ')
         code += items
+      // add item list (yello)
+      let yelloAmount = this.codeGen.picked
+        .filter(item => item.icon === ':yello:')
+        .reduce((total, next) => {
+          return total = total += next.amount
+        }, 0)
+      let yelloCode = `:yello: ${yelloAmount}`
+      console.log(yelloCode)
+      code = code + ' ' + yelloCode
       this.code = code.trim()
     },
     reset () {
@@ -184,6 +197,12 @@ export default {
         {value: ''}
       ]
       this.code = ''
+    },
+    copySuccess () {
+      this.$message({
+        message: '代碼複製成功',
+        type: 'success'
+      });
     }
   }
 }
