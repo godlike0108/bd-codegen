@@ -173,7 +173,11 @@ export default {
       let items = this.codeGen.picked
         .filter(item => item.icon !== ':yello:')
         .map(item => {
-          return `${item.icon} ${item.amount}`
+          if(item.amount !== 0) {
+            return `${item.icon} ${item.amount}`
+          } else {
+            return ''
+          }
         })
         .join(' ')
         code += items
@@ -183,9 +187,10 @@ export default {
         .reduce((total, next) => {
           return total = total += next.amount
         }, 0)
-      let yelloCode = `:yello: ${yelloAmount}`
-      console.log(yelloCode)
-      code = code + ' ' + yelloCode
+      if(yelloAmount !== 0) {
+        let yelloCode = `:yello: ${yelloAmount}`
+        code = code + ' ' + yelloCode
+      }
       this.code = code.trim()
     },
     reset () {
