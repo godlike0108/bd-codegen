@@ -97,11 +97,7 @@ import utils from './utils/utils.js'
 export default {
   name: 'app',
   mounted() {
-    this.itemRaw = itemData.items.map(item => {
-      item.amount = 0
-      item.total = 0
-      return item
-    })
+    this.resetItemRaw()
   },
   data () {
     return {
@@ -206,6 +202,14 @@ export default {
         {value: ''}
       ]
       this.code = ''
+      this.resetItemRaw()
+    },
+    resetItemRaw () {
+      this.itemRaw = itemData.items.map(item => {
+        item.amount = 0
+        item.total = 0
+        return item
+      })
     },
     copySuccess () {
       this.$message({
