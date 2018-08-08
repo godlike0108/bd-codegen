@@ -237,7 +237,8 @@ export default {
 .code {
   color: #FFF;
   background: #232323;
-  padding: 20px;
+  padding: 30px 0px;
+  overflow-x: scroll;
   code {
     font: normal 10pt Consolas, Monaco, monospace;
   }
